@@ -1,9 +1,9 @@
 ARG ARCH=amd64
 ARG JDK=adoptopenjdk:11-jre-openj9-bionic
 ARG BUILD_DATE
-ARG BUILD_VERSION=2.21.0-custom
+ARG BUILD_VERSION=2.27.0-custom
 ARG BUILD_REF=na
-ARG ALLURE_RELEASE=2.21.0
+ARG ALLURE_RELEASE=2.27.0
 ARG ALLURE_REPO=https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
 ARG UID=1000
 ARG GID=1000
@@ -44,9 +44,9 @@ LABEL org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.url="https://docs.qameta.io/allure/" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/fescobar/allure-docker-service" \
+    org.label-schema.vcs-url="https://github.com/wagnerjacqueline/allure-docker-service" \
     org.label-schema.arch=${ARCH} \
-    authors="Frank Escobar <fescobar.systems@gmail.com>, Raymond Mouthaan <raymondmmouthaan@gmail.com>"
+    authors="Jacqueline Wagner <jacqueline.wagner@dedalus.com>, Frank Escobar <fescobar.systems@gmail.com>, Raymond Mouthaan <raymondmmouthaan@gmail.com>"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -113,10 +113,8 @@ RUN chown -R allure:allure $ROOT
 
 VOLUME [ "$RESULTS_DIRECTORY" ]
 
-ENV DEPRECATED_PORT=4040
 ENV PORT=5050
 
-EXPOSE $DEPRECATED_PORT
 EXPOSE $PORT
 
 HEALTHCHECK --interval=10s --timeout=60s --retries=3 \
@@ -124,4 +122,4 @@ HEALTHCHECK --interval=10s --timeout=60s --retries=3 \
 
 USER allure
 
-CMD $ROOT/runAllureDeprecated.sh & $ROOT/runAllureApp.sh & $ROOT/checkAllureResultsFiles.sh
+CMD $ROOT/runAllureApp.sh & $ROOT/checkAllureResultsFiles.sh

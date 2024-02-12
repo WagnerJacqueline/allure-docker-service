@@ -2,7 +2,7 @@
 [![](resources/docker.png)](https://docs.docker.com/)
 
 # ALLURE DOCKER SERVICE
-[![](https://github.com/fescobar/allure-docker-service/actions/workflows/docker-publish.yml/badge.svg?branch=master)](https://github.com/fescobar/allure-docker-service/actions?query=branch%3Amaster)
+[![](https://github.com/wagnerjacqueline/allure-docker-service/actions/workflows/docker-publish.yml/badge.svg?branch=master)](https://github.com/wagnerjacqueline/allure-docker-service/actions?query=branch%3Amaster)
 
 ![](https://img.shields.io/docker/pulls/frankescobar/allure-docker-service)
 
@@ -23,7 +23,6 @@ Table of contents
             * [Multiple Project - Docker on Windows (Git Bash)](#multiple-project---docker-on-windows-git-bash)
             * [Multiple Project - Docker Compose](#multiple-project---docker-compose)
             * [Creating our first project](#creating-our-first-project)
-      * [PORT 4040 Deprecated](#port-4040-deprecated)
       * [Known Issues](#known-issues)
       * [Opening & Refreshing Report](#opening--refreshing-report)
       * [New User Interface](#new-user-interface)
@@ -79,7 +78,7 @@ For that reason, this docker container allows you to see up to date reports simp
 - Useful for the team to check the tests status for every project.
 
 ### Docker Hub
-- Repository: [frankescobar/allure-docker-service](https://hub.docker.com/r/frankescobar/allure-docker-service/)
+- Repository: [wagnerjacqueline/allure-docker-service](https://ghcr.io/wagnerjacqueline/allure-docker-service/)
 
 ### Docker Versions
 Docker container versions are based on binary [Allure 2 releases](https://github.com/allure-framework/allure2/releases/)
@@ -87,7 +86,7 @@ Docker container versions are based on binary [Allure 2 releases](https://github
 #### Image Variants
 Allure Docker Service supports architectures amd64, arm32v7 and arm64v8.
 
-- Tags: https://hub.docker.com/r/frankescobar/allure-docker-service/tags
+- Tags: https://ghcr.io/wagnerjacqueline/allure-docker-service/tags
 
 The following table shows the variation of provided images.
 
@@ -99,33 +98,33 @@ The following table shows the variation of provided images.
 
 The following table shows the provided Manifest Lists.
 
-| **Tag**                                | **allure-docker-service Base Image**              |
-|----------------------------------------|---------------------------------------------------|
-| latest, 2.21.0                         | frankescobar/allure-docker-service:2.21.0-amd64   |
-|                                        | frankescobar/allure-docker-service:2.21.0-arm32v7 |
-|                                        | frankescobar/allure-docker-service:2.21.0-arm64v8 |
+| **Tag**        | **allure-docker-service Base Image**              |
+|----------------|---------------------------------------------------|
+| latest, 2.27.0 | ghcr.io/wagnerjacqueline/allure-docker-service:2.27.0-amd64   |
+|                | ghcr.io/wagnerjacqueline/allure-docker-service:2.27.0-arm32v7 |
+|                |ghcr.io/wagnerjacqueline/allure-docker-service:2.27.0-arm64v8 |
 
 ## USAGE
 ### Generate Allure Results
 First at all it's important to be clear. This container only generates reports based on results. You have to generate allure results according to the technology what are you using.
 
-Reference: https://github.com/fescobar/allure-docker-service-examples
+Reference: https://github.com/wagnerjacqueline/allure-docker-service-examples
 
 We have some examples projects:
-- [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example)
-- [allure-docker-java-junit4-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-junit4-example)
-- [allure-docker-java-cucumber-jvm-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-cucumber-jvm-example)
-- [allure-docker-nodejs-cucumber-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-nodejs-cucumber-example)
-- [allure-docker-nodejs-typescript-cucumber-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-nodejs-typescript-cucumber-example)
-- [allure-docker-nodejs-typescript-mocha-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-nodejs-typescript-mocha-example)
-- [allure-docker-python-behave-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-python-behave-example)
-- [allure-docker-python-pytest-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-python-pytest-example)
-- [AllureDockerCSharpExample](https://github.com/fescobar/allure-docker-service-examples/tree/master/AllureDockerCSharpExample)
-- [AllureDockerCSharpSpecFlow3Example](https://github.com/fescobar/allure-docker-service-examples/tree/master/AllureDockerCSharpSpecFlow3Example)
+- [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example)
+- [allure-docker-java-junit4-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-junit4-example)
+- [allure-docker-java-cucumber-jvm-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-cucumber-jvm-example)
+- [allure-docker-nodejs-cucumber-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-nodejs-cucumber-example)
+- [allure-docker-nodejs-typescript-cucumber-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-nodejs-typescript-cucumber-example)
+- [allure-docker-nodejs-typescript-mocha-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-nodejs-typescript-mocha-example)
+- [allure-docker-python-behave-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-python-behave-example)
+- [allure-docker-python-pytest-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-python-pytest-example)
+- [AllureDockerCSharpExample](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/AllureDockerCSharpExample)
+- [AllureDockerCSharpSpecFlow3Example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/AllureDockerCSharpSpecFlow3Example)
 
-In this case we are going to generate results using the java project [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) of this repository.
+In this case we are going to generate results using the java project [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) of this repository.
 
-Go to directory [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) via command line:
+Go to directory [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) via command line:
 
 ```sh
 cd allure-docker-java-testng-example
@@ -167,14 +166,14 @@ java.lang.AssertionError: FAILURE ON PURPOSE
 [INFO] ------------------------------------------------------------------------
 ```
 
-There are 2 tests, one of them failed. Now you can see the `allure-results` diretory was created inside of [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) project.
+There are 2 tests, one of them failed. Now you can see the `allure-results` diretory was created inside of [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) project.
 
 Just it has left 1 step more. You have to run `allure-docker-service` mounting your `allure-results` directory.
 
 Start the container for a single project -> [SINGLE PROJECT - LOCAL REPORTS](#SINGLE-PROJECT---LOCAL-REPORTS)
 
 ### ALLURE DOCKER SERVICE
-Docker Image: https://hub.docker.com/r/frankescobar/allure-docker-service/
+Docker Image: https://ghcr.io/wagnerjacqueline/allure-docker-service/
 
 |  **Project Type**   |  **Port**  |       **Volume Path**     |  **Container Volume Path**   |
 |---------------------|------------|---------------------------|------------------------------|
@@ -197,31 +196,31 @@ All the information related local executions will be stored in the `default` pro
 - http://localhost:5050/allure-docker-service/projects/default
 
 ##### Single Project - Docker on Unix/Mac
-From this directory [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
+From this directory [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
 ```sh
       docker run -p 5050:5050 -e CHECK_RESULTS_EVERY_SECONDS=3 -e KEEP_HISTORY=1 \
                  -v ${PWD}/allure-results:/app/allure-results \
                  -v ${PWD}/allure-reports:/app/default-reports \
-                 frankescobar/allure-docker-service
+                 ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 
 ##### Single Project - Docker on Windows (Git Bash)
-From this directory [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
+From this directory [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
 ```sh
       docker run -p 5050:5050 -e CHECK_RESULTS_EVERY_SECONDS=3 -e KEEP_HISTORY=1 \
                  -v "/$(pwd)/allure-results:/app/allure-results" \
                  -v "/$(pwd)/allure-reports:/app/default-reports" \
-                 frankescobar/allure-docker-service
+                ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 
 ##### Single Project - Docker Compose
-Using docker-compose is the best way to manage containers: [allure-docker-java-testng-example/docker-compose.yml](https://github.com/fescobar/allure-docker-service-examples/blob/master/allure-docker-java-testng-example/docker-compose.yml)
+Using docker-compose is the best way to manage containers: [allure-docker-java-testng-example/docker-compose.yml](https://github.com/wagnerjacqueline/allure-docker-service-examples/blob/master/allure-docker-java-testng-example/docker-compose.yml)
 
 ```sh
 version: '3'
 services:
   allure:
-    image: "frankescobar/allure-docker-service"
+    image: "ghcr.io/wagnerjacqueline/allure-docker-service"
     environment:
       CHECK_RESULTS_EVERY_SECONDS: 1
       KEEP_HISTORY: 1
@@ -232,7 +231,7 @@ services:
       - ${PWD}/allure-reports:/app/default-reports
 ```
 
-From this directory [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
+From this directory [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) execute next command:
 
 ```sh
 docker-compose up allure
@@ -252,7 +251,6 @@ docker-compose logs -f allure
 
 NOTE:
 - Check the [New User Interface](#new-user-interface)
-- Read about [PORT 4040 Deprecated](#port-4040-deprecated) in case you are using previous versions.
 - The `${PWD}/allure-results` directory could be in anywhere on your machine. Your project must generate results in that directory.
 - The `/app/allure-results` directory is inside of the container. You MUST NOT change this directory, otherwise, the container won't detect the new changes.
 - The `/app/default-reports` directory is inside of the container. You MUST NOT change this directory, otherwise, the history reports won't be stored.
@@ -273,24 +271,24 @@ IMPORTANT NOTE:
 ```sh
       docker run -p 5050:5050 -e CHECK_RESULTS_EVERY_SECONDS=NONE -e KEEP_HISTORY=1 \
                  -v ${PWD}/projects:/app/projects \
-                 frankescobar/allure-docker-service
+                 ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 
 ##### Multiple Project - Docker on Windows (Git Bash)
 ```sh
       docker run -p 5050:5050 -e CHECK_RESULTS_EVERY_SECONDS=NONE -e KEEP_HISTORY=1 \
                  -v "/$(pwd)/projects:/app/projects" \
-                 frankescobar/allure-docker-service
+                 ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 
 ##### Multiple Project - Docker Compose
-Using docker-compose is the best way to manage containers: [allure-docker-multi-project-example/docker-compose.yml](https://github.com/fescobar/allure-docker-service-examples/blob/master/allure-docker-multi-project-example/docker-compose.yml)
+Using docker-compose is the best way to manage containers: [allure-docker-multi-project-example/docker-compose.yml](https://github.com/wagnerjacqueline/allure-docker-service-examples/blob/master/allure-docker-multi-project-example/docker-compose.yml)
 
 ```sh
 version: '3'
 services:
   allure:
-    image: "frankescobar/allure-docker-service"
+    image: "ghcr.io/wagnerjacqueline/allure-docker-service"
     environment:
       CHECK_RESULTS_EVERY_SECONDS: NONE
       KEEP_HISTORY: 1
@@ -320,7 +318,6 @@ docker-compose logs -f allure
 NOTE:
 - Check the [New User Interface](#new-user-interface)
 - Check [Deploy using Kubernetes](#deploy-using-kubernetes)
-- Read about [PORT 4040 Deprecated](#port-4040-deprecated) in case you are using previous versions.
 - The `/app/projects` directory is inside of the container. You MUST NOT change this directory, otherwise, the information about projects won't be stored.
 
 NOTE FOR WINDOWS USERS:
@@ -401,29 +398,8 @@ NOTE:
 - You MUST NOT MODIFY MANUALLY the structure directory of any project, you could affect the right behaviour.
 - If you don't attach your volume with the proper path `/app/projects` you will lost the information about the projects generated for you.
 
-
-### PORT 4040 Deprecated
-The first versions of this container used port `4040` for Allure Report and port `5050` for Allure API.
-
-The latest version includes new features `Multiple Projects` & `Navigate detailed previous history/trends`. These improvements allow us to handle multiple projects and multiple history reports.
-
-The only change required from your side is start using only port `5050` and instead to use http://localhost:4040/ for rendering Allure report you should use http://localhost:5050/allure-docker-service/latest-report
-
-If you are mounting your volume `-v ${PWD}/allure-results:/app/allure-results` your allure results are being used and stored in `default` project internally in the container, you don't need to change your volume path directory or do anything else. If you want to keep the history reports start to attach another path ` -v ${PWD}/allure-reports:/app/default-reports`.
-
-If you are already using port `4040`, NO WORRIES. The Allure Report exposed in port `4040` will still being rendered for avoiding compatibility problems.
-The only issue you will face will be when you try to navigate the HISTORY from the TREND chart or any other widget aiming to any historic data. The error you will see is `HTTP ERROR 404 NOT FOUND`
-
-|       **Version**     |  **Port**  |       **Volume Path**     |  **Container Volume Path**   |                     **Get Latest Report**                    |
-|-----------------------|------------|---------------------------|------------------------------|--------------------------------------------------------------|
-|  Previous to 2.13.3   |    4040    |   ${PWD}/allure-results   |    /app/allure-results       |   http://localhost:4040/                                     |
-|  From 2.13.3          |    5050    |   ${PWD}/allure-results   |    /app/allure-results       |   http://localhost:5050/allure-docker-service/latest-report  |
-|                       |            |   ${PWD}/allure-reports   |    /app/default-reports      |                                                              |
-
-Check the new commands to start the container for a single project or for multiple projects: [ALLURE DOCKER SERVICE](#allure-docker-service-1)
-
 ### Known Issues
-- `Permission denied` --> https://github.com/fescobar/allure-docker-service/issues/108
+- `Permission denied` --> https://github.com/wagnerjacqueline/allure-docker-service/issues/108
 
 ### Opening & Refreshing Report
 If everything was OK, you will see this:
@@ -471,7 +447,7 @@ The `redirect=false` parameter is used to avoid be redirected to the `GET /proje
 
 Now we can run other tests without being worried about Allure server. You don't need to restart or execute any Allure command.
 
-Just go again to this directory [allure-docker-java-testng-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) via command line:
+Just go again to this directory [allure-docker-java-testng-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-java-testng-example) via command line:
 ```sh
 cd allure-docker-java-testng-example
 ```
@@ -506,17 +482,17 @@ mvn test -Dtest=FourthTestFactory
 
 ### New User Interface
 Check the new UI
-- [https://github.com/fescobar/allure-docker-service-ui](https://github.com/fescobar/allure-docker-service-ui)
+- [https://github.com/wagnerjacqueline/allure-docker-service-ui](https://github.com/wagnerjacqueline/allure-docker-service-ui)
 
-[![](https://github.com/fescobar/allure-docker-service-ui/blob/master/resources/signin-allure-docker-service-ui.png?raw=true)](https://github.com/fescobar/allure-docker-service-ui/blob/master/resources/signin-allure-docker-service-ui.png?raw=true)
+[![](https://github.com/wagnerjacqueline/allure-docker-service-ui/blob/master/resources/signin-allure-docker-service-ui.png?raw=true)](https://github.com/wagnerjacqueline/allure-docker-service-ui/blob/master/resources/signin-allure-docker-service-ui.png?raw=true)
 
-[![](https://github.com/fescobar/allure-docker-service-ui/blob/master/resources/allure-docker-service-ui.png?raw=true)](https://github.com/fescobar/allure-docker-service-ui/blob/master/resources/allure-docker-service-ui.png?raw=true)
+[![](https://github.com/wagnerjacqueline/allure-docker-service-ui/blob/master/resources/allure-docker-service-ui.png?raw=true)](https://github.com/wagnerjacqueline/allure-docker-service-ui/blob/master/resources/allure-docker-service-ui.png?raw=true)
 
 ### Deploy using Kubernetes
-[![](https://github.com/fescobar/allure-docker-service-examples/blob/master/resources/kubernetes.png?raw=true)](https://github.com/fescobar/allure-docker-service-examples/blob/master/resources/kubernetes.png?raw=true)
+[![](https://github.com/wagnerjacqueline/allure-docker-service-examples/blob/master/resources/kubernetes.png?raw=true)](https://github.com/wagnerjacqueline/allure-docker-service-examples/blob/master/resources/kubernetes.png?raw=true)
 
 Check yaml definitions here:
-- [allure-docker-kubernetes-example](https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-kubernetes-example)
+- [allure-docker-kubernetes-example](https://github.com/wagnerjacqueline/allure-docker-service-examples/tree/master/allure-docker-kubernetes-example)
 
 
 ### Extra options
@@ -718,20 +694,20 @@ Enable `API_RESPONSE_LESS_VERBOSE` environment variable if you are handling big 
 
 
 #### Switching version
-You can switch the version container using `frankescobar/allure-docker-service:${VERSION_NUMBER}`.
+You can switch the version container using `ghcr.io/wagnerjacqueline/allure-docker-service:${VERSION_NUMBER}`.
 Docker Compose example:
 ```sh
   allure:
-    image: "frankescobar/allure-docker-service:2.21.0"
+    image: "fghcr.io/wagnerjacqueline/allure-docker-service:2.27.0"
 ```
 or using latest version:
 
 ```sh
   allure:
-    image: "frankescobar/allure-docker-service:latest"
+    image: "ghcr.io/wagnerjacqueline/allure-docker-service:latest"
 ```
 
-By default it will take last version: https://hub.docker.com/r/frankescobar/allure-docker-service/tags
+By default it will take last version: https://ghcr.io/wagnerjacqueline/allure-docker-service/tags
 
 #### Switching port
 Inside of the container `Allure API` use port `5050`.
@@ -877,7 +853,7 @@ or from Docker you can use parameter `--user`
 docker run --user="$(id -u):$(id -g)" -p 5050:5050 -e CHECK_RESULTS_EVERY_SECONDS=3 -e KEEP_HISTORY="TRUE" \
            -v ${PWD}/allure-results:/app/allure-results \
            -v ${PWD}/allure-reports:/app/default-reports \
-           frankescobar/allure-docker-service
+           ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 
 Note: It's not a good practice to use `root` user to manipulate containers.
@@ -1395,7 +1371,7 @@ docker-compose -f docker-compose-dev.yml up --build
 ```
 ### Build image
 ```sh
-docker build -t allure-release -f docker-custom/Dockerfile.bionic-custom --build-arg ALLURE_RELEASE=2.21.0 .
+docker build -t allure-release -f docker-custom/Dockerfile.bionic-custom --build-arg ALLURE_RELEASE=2.27.0 .
 ```
 ### Run container
 ```sh
@@ -1432,19 +1408,19 @@ docker images -f dangling=true | xargs docker rmi
 ### Register tagged image (Example)
 ```sh
 docker login
-docker tag allure-release frankescobar/allure-docker-service:${PUBLIC_TAG}
-docker push frankescobar/allure-docker-service
+docker tag allure-release ghcr.io/wagnerjacqueline/allure-docker-service:${PUBLIC_TAG}
+docker push ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 ### Register latest image (Example)
 ```sh
-docker tag allure-release frankescobar/allure-docker-service:latest
-docker push frankescobar/allure-docker-service
+docker tag allure-release ghcr.io/wagnerjacqueline/allure-docker-service:latest
+docker push ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 ### Download latest image registered (Example)
 ```sh
-docker run -d  -p 5050:5050 frankescobar/allure-docker-service
+docker run -d  -p 5050:5050 ghcr.io/wagnerjacqueline/allure-docker-service
 ```
 ### Download specific tagged image registered (Example)
 ```sh
-docker run -d -p 5050:5050 frankescobar/allure-docker-service:2.21.0
+docker run -d -p 5050:5050 ghcr.io/wagnerjacqueline/allure-docker-service:2.27.0
 ```
